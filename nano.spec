@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x0D28D4D2A0ACE884 (bensberg@telfort.nl)
 #
 Name     : nano
-Version  : 4.3
-Release  : 59
-URL      : https://www.nano-editor.org/dist/v4/nano-4.3.tar.xz
-Source0  : https://www.nano-editor.org/dist/v4/nano-4.3.tar.xz
-Source99 : https://www.nano-editor.org/dist/v4/nano-4.3.tar.xz.asc
+Version  : 4.4
+Release  : 60
+URL      : https://www.nano-editor.org/dist/v4/nano-4.4.tar.xz
+Source0  : https://www.nano-editor.org/dist/v4/nano-4.4.tar.xz
+Source1 : https://www.nano-editor.org/dist/v4/nano-4.4.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-3.0 GPL-3.0+
@@ -72,15 +72,15 @@ man components for the nano package.
 
 
 %prep
-%setup -q -n nano-4.3
+%setup -q -n nano-4.4
 %patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1560863137
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1567483491
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -100,14 +100,14 @@ export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-
 make  %{?_smp_mflags}
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1560863137
+export SOURCE_DATE_EPOCH=1567483491
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/nano
 cp COPYING %{buildroot}/usr/share/package-licenses/nano/COPYING
