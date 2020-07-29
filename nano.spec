@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x0D28D4D2A0ACE884 (bensberg@telfort.nl)
 #
 Name     : nano
-Version  : 4.9.3
-Release  : 69
-URL      : https://www.nano-editor.org/dist/v4/nano-4.9.3.tar.xz
-Source0  : https://www.nano-editor.org/dist/v4/nano-4.9.3.tar.xz
-Source1  : https://www.nano-editor.org/dist/v4/nano-4.9.3.tar.xz.asc
+Version  : 5.0
+Release  : 70
+URL      : https://www.nano-editor.org/dist/v5/nano-5.0.tar.xz
+Source0  : https://www.nano-editor.org/dist/v5/nano-5.0.tar.xz
+Source1  : https://www.nano-editor.org/dist/v5/nano-5.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-3.0 GPL-3.0+
@@ -26,8 +26,10 @@ BuildRequires : slang-dev
 Patch1: 0001-Support-a-stateless-configuration-by-default.patch
 
 %description
-GNU nano is a small and friendly text editor.  It aims to emulate the
-Pico text editor while also offering several enhancements.
+GNU nano -- a simple editor, inspired by Pico
+Overview
+The nano project was started because of a few "problems" with the
+wonderfully easy-to-use and friendly Pico text editor.
 
 %package bin
 Summary: bin components for the nano package.
@@ -82,8 +84,8 @@ man components for the nano package.
 
 
 %prep
-%setup -q -n nano-4.9.3
-cd %{_builddir}/nano-4.9.3
+%setup -q -n nano-5.0
+cd %{_builddir}/nano-5.0
 %patch1 -p1
 
 %build
@@ -91,7 +93,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1590465919
+export SOURCE_DATE_EPOCH=1596033579
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -118,11 +120,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1590465919
+export SOURCE_DATE_EPOCH=1596033579
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/nano
-cp %{_builddir}/nano-4.9.3/COPYING %{buildroot}/usr/share/package-licenses/nano/842745cb706f8f2126506f544492f7a80dbe29b3
-cp %{_builddir}/nano-4.9.3/COPYING.DOC %{buildroot}/usr/share/package-licenses/nano/bd75d59f9d7d9731bfabdc48ecd19e704d218e38
+cp %{_builddir}/nano-5.0/COPYING %{buildroot}/usr/share/package-licenses/nano/842745cb706f8f2126506f544492f7a80dbe29b3
+cp %{_builddir}/nano-5.0/COPYING.DOC %{buildroot}/usr/share/package-licenses/nano/bd75d59f9d7d9731bfabdc48ecd19e704d218e38
 %make_install
 
 %files
@@ -143,11 +145,16 @@ cp %{_builddir}/nano-4.9.3/COPYING.DOC %{buildroot}/usr/share/package-licenses/n
 /usr/share/nano/changelog.nanorc
 /usr/share/nano/cmake.nanorc
 /usr/share/nano/css.nanorc
-/usr/share/nano/debian.nanorc
 /usr/share/nano/default.nanorc
 /usr/share/nano/elisp.nanorc
-/usr/share/nano/fortran.nanorc
-/usr/share/nano/gentoo.nanorc
+/usr/share/nano/email.nanorc
+/usr/share/nano/extra/ada.nanorc
+/usr/share/nano/extra/debian.nanorc
+/usr/share/nano/extra/fortran.nanorc
+/usr/share/nano/extra/gentoo.nanorc
+/usr/share/nano/extra/haskell.nanorc
+/usr/share/nano/extra/povray.nanorc
+/usr/share/nano/extra/spec.nanorc
 /usr/share/nano/go.nanorc
 /usr/share/nano/groff.nanorc
 /usr/share/nano/guile.nanorc
@@ -158,8 +165,7 @@ cp %{_builddir}/nano-4.9.3/COPYING.DOC %{buildroot}/usr/share/package-licenses/n
 /usr/share/nano/lua.nanorc
 /usr/share/nano/makefile.nanorc
 /usr/share/nano/man.nanorc
-/usr/share/nano/mgp.nanorc
-/usr/share/nano/mutt.nanorc
+/usr/share/nano/markdown.nanorc
 /usr/share/nano/nanohelp.nanorc
 /usr/share/nano/nanorc.nanorc
 /usr/share/nano/nftables.nanorc
@@ -169,13 +175,11 @@ cp %{_builddir}/nano-4.9.3/COPYING.DOC %{buildroot}/usr/share/package-licenses/n
 /usr/share/nano/perl.nanorc
 /usr/share/nano/php.nanorc
 /usr/share/nano/po.nanorc
-/usr/share/nano/postgresql.nanorc
-/usr/share/nano/pov.nanorc
 /usr/share/nano/python.nanorc
 /usr/share/nano/ruby.nanorc
 /usr/share/nano/rust.nanorc
 /usr/share/nano/sh.nanorc
-/usr/share/nano/spec.nanorc
+/usr/share/nano/sql.nanorc
 /usr/share/nano/tcl.nanorc
 /usr/share/nano/tex.nanorc
 /usr/share/nano/texinfo.nanorc

@@ -19,18 +19,6 @@ Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
  4 files changed, 337 insertions(+), 4 deletions(-)
  create mode 100644 src/nanorc
 
-diff --git a/Makefile.am b/Makefile.am
-index 1971a11..bb552ca 100644
---- a/Makefile.am
-+++ b/Makefile.am
-@@ -7,6 +7,6 @@ SUBDIRS += syntax
- endif
- 
- EXTRA_DIST = ChangeLog.1999-2006 ChangeLog.2007-2015 \
--		IMPROVEMENTS README.GIT nano.spec
-+		IMPROVEMENTS README.GIT nano.spec src/nanorc
- 
- ACLOCAL_AMFLAGS = -I m4
 diff --git a/src/Makefile.am b/src/Makefile.am
 index 625434c..0ac120e 100644
 --- a/src/Makefile.am
@@ -397,3 +385,14 @@ index 8fc105a..349af77 100644
  
  	if (is_good_file(nanorc))
  		parse_one_nanorc();
+--- nano-5.0/Makefile.am~	2020-06-24 13:19:06.000000000 +0000
++++ nano-5.0/Makefile.am	2020-07-29 14:37:28.958474352 +0000
+@@ -7,7 +7,7 @@
+ endif
+ 
+ EXTRA_DIST = ChangeLog.1999-2006 ChangeLog.2007-2015 \
+-		IMPROVEMENTS README.GIT
++		IMPROVEMENTS README.GIT src/nanorc
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
