@@ -379,10 +379,10 @@ index 0000000..ac066f6
 +## XML-type files
 +include "/usr/share/nano/xml.nanorc"
 diff --git a/src/rcfile.c b/src/rcfile.c
-index c259cc7..71bc3e4 100644
+index 3824de9..eb1c134 100644
 --- a/src/rcfile.c
 +++ b/src/rcfile.c
-@@ -1685,8 +1685,13 @@ void do_rcfiles(void)
+@@ -1678,8 +1678,13 @@ void do_rcfiles(void)
  		nanorc = get_full_path(custom_nanorc);
  		if (access(nanorc, F_OK) != 0)
  			die(_("Specified rcfile does not exist\n"));
