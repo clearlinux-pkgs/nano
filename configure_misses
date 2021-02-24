@@ -1,7 +1,9 @@
 Configure miss: whether the compiler is clang
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
+Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether free is known to preserve errno
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: working re_compile_pattern
