@@ -6,7 +6,7 @@
 #
 Name     : nano
 Version  : 5.7
-Release  : 79
+Release  : 80
 URL      : https://www.nano-editor.org/dist/v5/nano-5.7.tar.xz
 Source0  : https://www.nano-editor.org/dist/v5/nano-5.7.tar.xz
 Source1  : https://www.nano-editor.org/dist/v5/nano-5.7.tar.xz.asc
