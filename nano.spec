@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x0D28D4D2A0ACE884 (bensberg@telfort.nl)
 #
 Name     : nano
-Version  : 5.9
-Release  : 82
-URL      : https://www.nano-editor.org/dist/v5/nano-5.9.tar.xz
-Source0  : https://www.nano-editor.org/dist/v5/nano-5.9.tar.xz
-Source1  : https://www.nano-editor.org/dist/v5/nano-5.9.tar.xz.asc
+Version  : 6.0
+Release  : 83
+URL      : https://www.nano-editor.org/dist/v6/nano-6.0.tar.xz
+Source0  : https://www.nano-editor.org/dist/v6/nano-6.0.tar.xz
+Source1  : https://www.nano-editor.org/dist/v6/nano-6.0.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-3.0 GPL-3.0+
@@ -88,8 +88,8 @@ man components for the nano package.
 
 
 %prep
-%setup -q -n nano-5.9
-cd %{_builddir}/nano-5.9
+%setup -q -n nano-6.0
+cd %{_builddir}/nano-6.0
 %patch1 -p1
 
 %build
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1633530712
+export SOURCE_DATE_EPOCH=1639583244
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -124,11 +124,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1633530712
+export SOURCE_DATE_EPOCH=1639583244
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/nano
-cp %{_builddir}/nano-5.9/COPYING %{buildroot}/usr/share/package-licenses/nano/842745cb706f8f2126506f544492f7a80dbe29b3
-cp %{_builddir}/nano-5.9/COPYING.DOC %{buildroot}/usr/share/package-licenses/nano/bd75d59f9d7d9731bfabdc48ecd19e704d218e38
+cp %{_builddir}/nano-6.0/COPYING %{buildroot}/usr/share/package-licenses/nano/842745cb706f8f2126506f544492f7a80dbe29b3
+cp %{_builddir}/nano-6.0/COPYING.DOC %{buildroot}/usr/share/package-licenses/nano/bd75d59f9d7d9731bfabdc48ecd19e704d218e38
 %make_install
 
 %files
@@ -153,9 +153,7 @@ cp %{_builddir}/nano-5.9/COPYING.DOC %{buildroot}/usr/share/package-licenses/nan
 /usr/share/nano/elisp.nanorc
 /usr/share/nano/email.nanorc
 /usr/share/nano/extra/ada.nanorc
-/usr/share/nano/extra/debian.nanorc
 /usr/share/nano/extra/fortran.nanorc
-/usr/share/nano/extra/gentoo.nanorc
 /usr/share/nano/extra/haskell.nanorc
 /usr/share/nano/extra/povray.nanorc
 /usr/share/nano/extra/spec.nanorc
@@ -188,6 +186,7 @@ cp %{_builddir}/nano-5.9/COPYING.DOC %{buildroot}/usr/share/package-licenses/nan
 /usr/share/nano/tex.nanorc
 /usr/share/nano/texinfo.nanorc
 /usr/share/nano/xml.nanorc
+/usr/share/nano/yaml.nanorc
 
 %files doc
 %defattr(0644,root,root,0755)
