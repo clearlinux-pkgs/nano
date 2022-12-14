@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x514BBE2EB8E1961F (bensberg@telfort.nl)
 #
 Name     : nano
-Version  : 7.0
-Release  : 88
-URL      : https://www.nano-editor.org/dist/v7/nano-7.0.tar.xz
-Source0  : https://www.nano-editor.org/dist/v7/nano-7.0.tar.xz
-Source1  : https://www.nano-editor.org/dist/v7/nano-7.0.tar.xz.asc
+Version  : 7.1
+Release  : 89
+URL      : https://www.nano-editor.org/dist/v7/nano-7.1.tar.xz
+Source0  : https://www.nano-editor.org/dist/v7/nano-7.1.tar.xz
+Source1  : https://www.nano-editor.org/dist/v7/nano-7.1.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-3.0 GPL-3.0+
@@ -88,8 +88,8 @@ man components for the nano package.
 
 
 %prep
-%setup -q -n nano-7.0
-cd %{_builddir}/nano-7.0
+%setup -q -n nano-7.1
+cd %{_builddir}/nano-7.1
 %patch1 -p1
 
 %build
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1668525314
+export SOURCE_DATE_EPOCH=1671034519
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -124,7 +124,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1668525314
+export SOURCE_DATE_EPOCH=1671034519
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/nano
 cp %{_builddir}/nano-%{version}/COPYING %{buildroot}/usr/share/package-licenses/nano/842745cb706f8f2126506f544492f7a80dbe29b3 || :
