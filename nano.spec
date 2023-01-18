@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x514BBE2EB8E1961F (bensberg@telfort.nl)
 #
 Name     : nano
-Version  : 7.1
-Release  : 89
-URL      : https://www.nano-editor.org/dist/v7/nano-7.1.tar.xz
-Source0  : https://www.nano-editor.org/dist/v7/nano-7.1.tar.xz
-Source1  : https://www.nano-editor.org/dist/v7/nano-7.1.tar.xz.asc
+Version  : 7.2
+Release  : 90
+URL      : https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz
+Source0  : https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz
+Source1  : https://www.nano-editor.org/dist/v7/nano-7.2.tar.xz.asc
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-3.0 GPL-3.0+
@@ -23,6 +23,9 @@ BuildRequires : groff
 BuildRequires : pkgconfig(ncurses)
 BuildRequires : pkgconfig(ncursesw)
 BuildRequires : slang-dev
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 Patch1: 0001-Support-a-stateless-configuration-by-default.patch
 
 %description
@@ -88,8 +91,8 @@ man components for the nano package.
 
 
 %prep
-%setup -q -n nano-7.1
-cd %{_builddir}/nano-7.1
+%setup -q -n nano-7.2
+cd %{_builddir}/nano-7.2
 %patch1 -p1
 
 %build
@@ -97,15 +100,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1671034519
+export SOURCE_DATE_EPOCH=1674054565
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
-export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
-export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition "
+export CFLAGS="$CFLAGS -O3 -Os -fdata-sections -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition -g1 -gno-column-info -gno-variable-location-views -gz "
+export FCFLAGS="$FFLAGS -O3 -Os -fdata-sections -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition -g1 -gno-column-info -gno-variable-location-views -gz "
+export FFLAGS="$FFLAGS -O3 -Os -fdata-sections -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition -g1 -gno-column-info -gno-variable-location-views -gz "
+export CXXFLAGS="$CXXFLAGS -O3 -Os -fdata-sections -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -ffunction-sections -flto=auto -fno-semantic-interposition -g1 -gno-column-info -gno-variable-location-views -gz "
 %reconfigure --disable-static --disable-browser \
 --disable-extra \
 --disable-help \
@@ -124,7 +127,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1671034519
+export SOURCE_DATE_EPOCH=1674054565
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/nano
 cp %{_builddir}/nano-%{version}/COPYING %{buildroot}/usr/share/package-licenses/nano/842745cb706f8f2126506f544492f7a80dbe29b3 || :

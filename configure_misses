@@ -2,6 +2,7 @@ Configure miss: bool, true, false
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
 Configure miss: enhanced regular expression flag
+Configure miss: gcc option to enable large file support
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: stdckdint.h
 Configure miss: whether NLS is requested
