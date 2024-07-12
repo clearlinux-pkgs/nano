@@ -3,3 +3,10 @@
 glibc-locale
 groff
 slang-dev
+intltool-dev
+intltool
+gtk-doc
+gtk-doc-dev
+gettext-dev
+file-dev
+texinfo

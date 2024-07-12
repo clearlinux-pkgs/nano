@@ -1,16 +1,40 @@
+Configure miss: 32-bit host C ABI
+Configure miss: 32-bit host C ABI
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: CFLocaleCopyPreferredLanguages
+Configure miss: bool, true, false
 Configure miss: bool, true, false
 Configure miss: compiler option needed when checking for declarations
+Configure miss: compiler option needed when checking for declarations
+Configure miss: crtdefs.h
 Configure miss: crtdefs.h
 Configure miss: enhanced regular expression flag
+Configure miss: enhanced regular expression flag
+Configure miss: gcc option to enable large file support
 Configure miss: gcc option to enable large file support
 Configure miss: gcc options needed to detect all undeclared functions
-Configure miss: stdckdint.h
+Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: unreachable
+Configure miss: unreachable
+Configure miss: whether NLS is requested
 Configure miss: whether NLS is requested
 Configure miss: whether _XOPEN_SOURCE_EXTENDED is needed
+Configure miss: whether _XOPEN_SOURCE_EXTENDED is needed
+Configure miss: whether btowc is consistent with mbrtowc in the C locale
+Configure miss: whether btowc is consistent with mbrtowc in the C locale
 Configure miss: whether building from git
+Configure miss: whether building from git
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
+Configure miss: whether the compiler produces multi-arch binaries
 Configure miss: whether this system supports file names of any length
+Configure miss: whether this system supports file names of any length
+Configure miss: whether to use NLS
 Configure miss: whether to use NLS
