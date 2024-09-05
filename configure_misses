@@ -10,8 +10,8 @@ Configure miss: crtdefs.h
 Configure miss: crtdefs.h
 Configure miss: enhanced regular expression flag
 Configure miss: enhanced regular expression flag
-Configure miss: gcc option to enable large file support
-Configure miss: gcc option to enable large file support
+Configure miss: gcc option to support large files
+Configure miss: gcc option to support large files
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: unreachable
@@ -26,8 +26,12 @@ Configure miss: whether building from git
 Configure miss: whether building from git
 Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether ctype.h defines __header_inline
+Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether float.h conforms to ISO C23
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbrtowc stores incomplete characters
+Configure miss: whether nullptr_t needs <stddef.h>
+Configure miss: whether nullptr_t needs <stddef.h>
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether the compiler is clang
