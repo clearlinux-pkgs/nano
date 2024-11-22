@@ -9,7 +9,7 @@
 #
 Name     : nano
 Version  : 8.2
-Release  : 94
+Release  : 95
 URL      : https://www.nano-editor.org/dist/v8/nano-8.2.tar.gz
 Source0  : https://www.nano-editor.org/dist/v8/nano-8.2.tar.gz
 Source1  : https://www.nano-editor.org/dist/v8/nano-8.2.tar.gz.asc
