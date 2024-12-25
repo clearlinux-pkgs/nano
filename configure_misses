@@ -14,8 +14,12 @@ Configure miss: gcc option to support large files
 Configure miss: gcc option to support large files
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
+Configure miss: lutimens
+Configure miss: lutimens
 Configure miss: unreachable
 Configure miss: unreachable
+Configure miss: utimens
+Configure miss: utimens
 Configure miss: whether NLS is requested
 Configure miss: whether NLS is requested
 Configure miss: whether _XOPEN_SOURCE_EXTENDED is needed
@@ -34,6 +38,10 @@ Configure miss: whether nullptr_t needs <stddef.h>
 Configure miss: whether nullptr_t needs <stddef.h>
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc (..., 0) returns nonnull
+Configure miss: whether realloc should abort upon undefined behaviour
+Configure miss: whether realloc should abort upon undefined behaviour
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler is clang
 Configure miss: whether the compiler produces multi-arch binaries
