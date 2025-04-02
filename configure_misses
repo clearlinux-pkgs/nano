@@ -32,6 +32,10 @@ Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether float.h conforms to ISO C23
 Configure miss: whether float.h conforms to ISO C23
+Configure miss: whether langinfo.h defines ABALTMON_1
+Configure miss: whether langinfo.h defines ABALTMON_1
+Configure miss: whether locale.h defines _locale_t
+Configure miss: whether locale.h defines _locale_t
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether nullptr_t needs <stddef.h>
