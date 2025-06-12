@@ -2,8 +2,8 @@ Configure miss: 32-bit host C ABI
 Configure miss: 32-bit host C ABI
 Configure miss: CFLocaleCopyPreferredLanguages
 Configure miss: CFLocaleCopyPreferredLanguages
-Configure miss: bool, true, false
-Configure miss: bool, true, false
+Configure miss: checking for an ISO C++26 compliant stdckdint.h in C++
+Configure miss: checking for an ISO C++26 compliant stdckdint.h in C++
 Configure miss: compiler option needed when checking for declarations
 Configure miss: compiler option needed when checking for declarations
 Configure miss: crtdefs.h
@@ -16,8 +16,6 @@ Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: gcc options needed to detect all undeclared functions
 Configure miss: lutimens
 Configure miss: lutimens
-Configure miss: unreachable
-Configure miss: unreachable
 Configure miss: utimens
 Configure miss: utimens
 Configure miss: whether NLS is requested
@@ -30,16 +28,12 @@ Configure miss: whether building from git
 Configure miss: whether building from git
 Configure miss: whether ctype.h defines __header_inline
 Configure miss: whether ctype.h defines __header_inline
-Configure miss: whether float.h conforms to ISO C23
-Configure miss: whether float.h conforms to ISO C23
 Configure miss: whether langinfo.h defines ABALTMON_1
 Configure miss: whether langinfo.h defines ABALTMON_1
 Configure miss: whether locale.h defines _locale_t
 Configure miss: whether locale.h defines _locale_t
 Configure miss: whether mbrtowc stores incomplete characters
 Configure miss: whether mbrtowc stores incomplete characters
-Configure miss: whether nullptr_t needs <stddef.h>
-Configure miss: whether nullptr_t needs <stddef.h>
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether pthread_rwlock_rdlock prefers a writer to a reader
 Configure miss: whether realloc (..., 0) returns nonnull
